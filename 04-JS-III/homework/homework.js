@@ -111,8 +111,11 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-  if (arguments.length === 1) return arguments[0];
-  else if (!arguments.length) return 0;
+  if (arguments.length === 1) {
+    return arguments[0];
+  } else if (!arguments.length) {
+    return 0;
+  }
 
   let producto = arguments[0];
   for (let i = 1; i < arguments.length; i++) {
@@ -235,6 +238,15 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  let nuevoArray = [];
+  for (var i = 0; i < 10; i++) {
+    if (i === 5) {
+      continue;
+    }
+    numero += 2;
+    nuevoArray.push(numero);
+  }
+  return nuevoArray;
 }
 
 // No modificar nada debajo de esta línea
